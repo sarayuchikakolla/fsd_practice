@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="header">Registration Page</h1>
+    <form class="inputs" onsubmit="submitForm(); return false;">
+        Full name:<input type="text" placeholder="Fullname" required><br><br>
+        Flat/House number:<input type="text" placeholder="Flat/House number" required><br><br>
+        Email:<input type="email" placeholder="Email" required><br><br>
+        Mobile Number:<input type="tel" placeholder="Mobile Number" required><br><br>
+        Password:<input type="password" placeholder="Password" required><br><br>
+        Confirm Password:<input type="password" placeholder="Confirm Password" required><br><br>
+        <input type="radio" placeholder="resident type" name="resident_type" value="owner" required> Owner 
+        <input type="radio" placeholder="resident type" name="resident_type" value="tenant" required> Tenant<br><br>
+        <button type="submit">Register</button>
+    </form>
+    <script>
+        function submitForm(){
+            alert("you have submitted the form");
+        }
+    </script>
+</body>
+</html>

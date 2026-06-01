@@ -1,0 +1,24 @@
+
+.logo{
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+.header{
+    padding-top: 20px;
+    background-color: rgb(98, 149, 220);
+    text-align: center;
+}
+.nav{
+    text-align: center;
+}
+.inputs{
+    align-items: center;
+    text-align: center;
+}
+.border{
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    float: left;
+}
