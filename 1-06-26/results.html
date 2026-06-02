@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll Results Page</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+            padding:30px;
+        }
+
+        .container{
+            max-width:1000px;
+            margin:auto;
+        }
+
+        h1{
+            text-align:center;
+            color:#1e3a8a;
+            margin-bottom:10px;
+        }
+
+        .poll-title{
+            text-align:center;
+            font-size:18px;
+            margin-bottom:30px;
+            color:#555;
+        }
+
+        .winner-box{
+            background:#dcfce7;
+            border:2px solid #22c55e;
+            padding:20px;
+            border-radius:10px;
+            text-align:center;
+            margin-bottom:30px;
+        }
+
+        .winner-box h2{
+            color:#15803d;
+            margin-bottom:10px;
+        }
+
+        .winner-box p{
+            font-size:18px;
+            color:#333;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+            border-radius:10px;
+            overflow:hidden;
+            box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        th{
+            background:#2563eb;
+            color:white;
+            padding:15px;
+        }
+
+        td{
+            padding:15px;
+            text-align:center;
+            border-bottom:1px solid #ddd;
+        }
+
+        tr:hover{
+            background:#f8fafc;
+        }
+
+        .progress-container{
+            width:100%;
+            background:#e5e7eb;
+            border-radius:20px;
+            overflow:hidden;
+            height:20px;
+        }
+
+        .progress-bar{
+            height:100%;
+            color:white;
+            text-align:center;
+            line-height:20px;
+            font-size:12px;
+        }
+
+        .ravi{
+            width:45%;
+            background:#2563eb;
+        }
+
+        .priya{
+            width:35%;
+            background:#9333ea;
+        }
+
+        .suresh{
+            width:20%;
+            background:#f97316;
+        }
+
+        @media(max-width:768px){
+
+            table{
+                font-size:14px;
+            }
+
+            th, td{
+                padding:10px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Poll Results Page</h1>
+
+        <p class="poll-title">
+            <strong>Poll Name:</strong> Society Election 2026
+        </p>
+
+        <div class="winner-box">
+
+            <h2>Winner</h2>
+
+            <p>
+                Ravi Kumar won the election with 45% votes.
+            </p>
+
+        </div>
+
+        <table>
+
+            <tr>
+                <th>Candidate Name</th>
+                <th>Votes Received</th>
+                <th>Vote Percentage</th>
+                <th>Progress</th>
+            </tr>
+
+            <tr>
+                <td>Ravi Kumar</td>
+                <td>450</td>
+                <td>45%</td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar ravi">
+                            45%
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Priya Sharma</td>
+                <td>350</td>
+                <td>35%</td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar priya">
+                            35%
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Suresh Reddy</td>
+                <td>200</td>
+                <td>20%</td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar suresh">
+                            20%
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</body>
+</html>

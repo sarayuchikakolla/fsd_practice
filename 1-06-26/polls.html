@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>polling</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .p1, .p2, .p3 {
+            display: none;
+            border: #000000 1px solid;
+            padding: 10px;
+            margin-top: 10px;
+            width: 300px;
+        }
+
+        .poll-info:hover .p1 {
+            display: block;
+        }
+        .poll-info:hover .p2 {
+            display: block;
+        }
+        .poll-info:hover .p3{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1 style="text-align: center;">Poll Management Page </h1>
+        </div>
+    </header>
+    <h1>List of active polls</h1>
+    <!-- <div>
+    <ul style="align-items: center;">
+        <li type="disc"><a href="poll1.html">Poll 1: President Election </a></li>
+        <li type="disc"><a href="poll2.html">Poll 2: Secretary Election </a></li>
+        <li type="disc"><a href="poll3.html">Poll 3: Treasurer Election </a></li>
+    </ul>
+    </div> -->
+    <div class="polls">
+        <div class="poll-info">
+         <h2><a href="poll1.html">Poll 1: President Election </a> </h2>
+        <div class="p1">
+        <p><strong>Start Date:</strong> 13 June 2023</p>
+        <p><strong>End Date:</strong> 20 June 2023</p>
+        <p>Status: Active</p>
+        <button onclick="window.location.href='vote.html'">Vote Now</button>
+    </div>
+    </div>
+    <div class="poll-info">
+    <h2><a href="poll2.html">Poll 2: Secretary Election </a></h2>
+    <div class="p2">
+        <p><strong>Start Date:</strong> 13 June 2023</p>
+        <p><strong>End Date:</strong> 20 June 2023</p>
+        <p>Status: Active</p>
+        <button onclick="window.location.href='vote.html'">Vote Now</button>
+    </div>
+    </div>
+    <div class="poll-info">
+    <h2><a href="poll3.html">Poll 3: Treasurer Election </a></h2>
+    <div class="p3">
+        <p><strong>Start Date:</strong> 13 June 2023</p>
+        <p><strong>End Date:</strong> 20 June 2023</p>
+        <p>Status: Active</p>
+        <button onclick="window.location.href='vote.html'">Vote Now</button>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>votes</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #f4f6f9;
+        padding: 30px;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    h1 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 15px;
+    }
+
+    .poll-title {
+        text-align: center;
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    .candidate-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .candidate-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+    .candidate-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .candidate-name {
+        font-size: 22px;
+        font-weight: bold;
+        color: #1e3a8a;
+        margin-bottom: 12px;
+    }
+
+    .details {
+        margin-bottom: 8px;
+        color: #444;
+        font-size: 15px;
+    }
+
+    .manifesto {
+        margin-top: 12px;
+        padding: 12px;
+        background: #f8fafc;
+        border-left: 4px solid #2563eb;
+        border-radius: 6px;
+        color: #555;
+        font-style: italic;
+        line-height: 1.5;
+    }
+
+    .vote-option {
+        margin-top: 18px;
+        padding: 10px;
+        background: #eef4ff;
+        border-radius: 8px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .vote-option input[type="radio"] {
+        margin-right: 8px;
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+
+    .submit-section {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    button {
+        background: #2563eb;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    button:hover {
+        background: #1d4ed8;
+    }
+
+    button:active {
+        transform: scale(0.98);
+    }
+
+    @media (max-width: 600px) {
+        body {
+            padding: 15px;
+        }
+
+        .candidate-name {
+            font-size: 20px;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+    <h1>Voting Page</h1>
+    <p class="poll-title">
+        <strong>Poll Title:</strong> Welcome to Election
+    </p>
+
+    <form action="#" method="post">
+
+        <div class="candidate-list">
+
+            <!-- Candidate 1 -->
+            <div class="candidate-card">
+                <div class="candidate-name">Ravi Kumar</div>
+                <div class="details"><strong>Flat Number:</strong> A-101</div>
+                <div class="details"><strong>Position Applied For:</strong> President</div>
+                <div class="manifesto">
+                    "Improve security, community events, and maintenance services."
+                </div>
+
+                <div class="vote-option">
+                    <input type="radio" name="candidate" value="Ravi Kumar" required>
+                    Select Candidate
+                </div>
+            </div>
+
+            <!-- Candidate 2 -->
+            <div class="candidate-card">
+                <div class="candidate-name">Priya Sharma</div>
+                <div class="details"><strong>Flat Number:</strong> B-204</div>
+                <div class="details"><strong>Position Applied For:</strong> President</div>
+                <div class="manifesto">
+                    "Focus on transparency, digital services, and resident welfare."
+                </div>
+
+                <div class="vote-option">
+                    <input type="radio" name="candidate" value="Priya Sharma">
+                    Select Candidate
+                </div>
+            </div>
+
+            <!-- Candidate 3 -->
+            <div class="candidate-card">
+                <div class="candidate-name">Suresh Reddy</div>
+                <div class="details"><strong>Flat Number:</strong> C-305</div>
+                <div class="details"><strong>Position Applied For:</strong> President</div>
+                <div class="manifesto">
+                    "Enhance infrastructure, parking management, and green spaces."
+                </div>
+
+                <div class="vote-option">
+                    <input type="radio" name="candidate" value="Suresh Reddy">
+                    Select Candidate
+                </div>
+            </div>
+
+        </div>
+
+        <div class="submit-section">
+            <button type="submit">Submit Vote</button>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
