@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student management portal</title>
+    <link href="css/bootstrap.min.css"  rel="stylesheet">
+    <style>
+    .card:hover {
+        background-color: #f8f9fa; 
+        border: 1px solid #007bff; 
+    }
+    </style>
+</head>
+<body>
+    <header class="container text-center mb-3">
+        <img src="logo.png" alt="logo" width="120px" style="vertical-align: middle;">
+        <h1 style="display:inline-block; vertical-align:middle;">
+             CVR COLLLEGE OF ENGINEERING
+        </h1>
+        <div style="float:inline-end;">
+            <button class="btn btn-primary" onclick="window.location.href='login.html'">
+                Login
+            </button>
+        </div>
+        <nav id="nv" class="text-center mb-3">
+            <a href="home.html" id="nv1">Home</a> |
+            <a href="about.html">About</a> |
+
+            <div class="dropdown d-inline">
+                <button class="btn btn-link dropdown-toggle">
+            Course
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="cse.html">CSE</a></li>
+            <li><a class="dropdown-item" href="ece.html">ECE</a></li>
+            <li><a class="dropdown-item" href="eee.html">EEE</a></li>
+            <li><a class="dropdown-item" href="civil.html">Civil</a></li>
+            <li><a class="dropdown-item" href="mech.html">Mechanical</a></li>
+        </ul>
+        </button>
+    </div> |
+
+    <a href="contact.html">Contact</a>
+</nav>
+    </header> <hr/>
+    <marquee direction="right">Welcome to CVR College Of Engineering</marquee>
+    <hr />
+    <div class="container">
+        <h1>About</h1>
+        <p>The Cherabuddi Education Society was registered in January 1999 as an NRI-promoted society. 
+        The Society  aims at creating a state-of-the-art engineering institution in association with 
+        leading NRI technology professionals and well-known academicians of the twin states of Telangana & Andhra Pradesh.
+        The Society aims to harness technical excellence with a commitment to the ethos of 'useful learning'.</p>  
+    </div>
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-primary"onclick="window.location.href='register.html'">Register</button>
+    </div>
+<div class="container">
+    <h1>Features</h1><br>
+
+    <div class="row">
+
+        <!-- Student Registration -->
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="student.png" class="card-img-top" alt="Student Registration">
+                <div class="card-body">
+                    <h5 class="card-title">Student Registration</h5>
+                    <p class="card-text">
+                        Register students and maintain records.
+                    </p>
+                    <a href="#" class="btn btn-primary"onclick="window.location.href='Register.html'">Register</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Attendance Management -->
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="attendence.png" class="card-img-top" alt="Attendance Management">
+                <div class="card-body">
+                    <h5 class="card-title">Attendance Management</h5>
+                    <p class="card-text">
+                        Track and manage student attendance efficiently.
+                    </p>
+                    <a href="#" class="btn btn-primary " onclick="window.location.href='attendance.html'">Attendence</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Management -->
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="results.png" class="card-img-top" alt="Results Management">
+                <div class="card-body">
+                    <h5 class="card-title">Results Management</h5>
+                    <p class="card-text">
+                        View and manage student examination results.
+                    </p>
+                    <a href="#" class="btn btn-primary"onclick="window.location.href='results.html'">Results</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<hr>
+
+<!-- Footer -->
+<footer class="bg-light text-center p-3 mt-4">
+    <p>&copy; 2026 CVR College of Engineering.</p>
+
+    <a href="#">Facebook</a> |
+    <a href="#">Instagram</a> |
+    <a href="#">LinkedIn</a>
+</footer>
+</body>
+</html>
