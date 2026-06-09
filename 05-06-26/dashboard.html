@@ -1,0 +1,240 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f5f7fa;
+        }
+
+        .card {
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border: 1px solid #0d6efd;
+        }
+
+        .id-card {
+            width: 320px;
+        }
+
+        .search-box {
+            max-width: 400px;
+            margin: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container mt-4">
+
+        <h1 class="text-center mb-4">
+            Student Dashboard
+        </h1>
+
+        <div class="text-center mb-4">
+
+            <a href="home.html" class="btn btn-secondary">
+                Home
+            </a>
+
+            <a href="register.html" class="btn btn-primary">
+                Register Student
+            </a>
+
+            <button class="btn btn-dark" onclick="toggleMode()">
+                Dark Mode
+            </button>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-3 mb-3">
+                <div class="card shadow-sm text-center">
+                    <div class="card-body">
+                        <h5>Total Students</h5>
+                        <h2>500</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card shadow-sm text-center">
+                    <div class="card-body">
+                        <h5>Present</h5>
+                        <h2>450</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card shadow-sm text-center">
+                    <div class="card-body">
+                        <h5>Absent</h5>
+                        <h2>50</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card shadow-sm text-center">
+                    <div class="card-body">
+                        <h5>Placements</h5>
+                        <h2>420</h2>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="search-box">
+            <input type="text" id="searchBox" class="form-control mb-4" placeholder="Search Student...">
+        </div>
+
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-hover" id="studentTable">
+
+                <thead class="table-dark">
+                    <tr>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>Branch</th>
+                        <th>Attendance</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>101</td>
+                        <td>Sarayu</td>
+                        <td>CSE</td>
+                        <td><span class="badge bg-success">92%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>102</td>
+                        <td>Ravi</td>
+                        <td>ECE</td>
+                        <td><span class="badge bg-success">88%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>103</td>
+                        <td>Priya</td>
+                        <td>EEE</td>
+                        <td><span class="badge bg-warning">75%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>104</td>
+                        <td>Anil</td>
+                        <td>CIVIL</td>
+                        <td><span class="badge bg-danger">60%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>105</td>
+                        <td>Kiran</td>
+                        <td>MECH</td>
+                        <td><span class="badge bg-success">95%</span></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <hr>
+
+        <h3 class="text-center mb-3">
+            Student ID Card
+        </h3>
+
+        <div class="card id-card mx-auto shadow">
+
+            <div class="card-header bg-primary text-white text-center">
+                CVR College of Engineering
+            </div>
+
+            <div class="card-body text-center">
+
+                <img src="img/student.jpg" alt="Student" class="rounded-circle mb-3" width="100" height="100">
+
+                <h5>Sarayu Chikakolla</h5>
+
+                <p><strong>Roll No:</strong> 23B81A05XX</p>
+
+                <p><strong>Branch:</strong> CSE</p>
+
+                <p><strong>Year:</strong> III B.Tech</p>
+
+                <span class="badge bg-success">
+                    Active Student
+                </span>
+
+            </div>
+
+            <div class="card-footer text-center">
+                Student Management Portal
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        document.getElementById("searchBox")
+            .addEventListener("keyup", function () {
+
+                let filter = this.value.toLowerCase();
+
+                let rows =
+                    document.querySelectorAll(
+                        "#studentTable tbody tr"
+                    );
+
+                rows.forEach(function (row) {
+
+                    let text =
+                        row.textContent.toLowerCase();
+
+                    row.style.display =
+                        text.includes(filter)
+                            ? ""
+                            : "none";
+
+                });
+
+            });
+
+        function toggleMode() {
+
+            document.body.classList.toggle("bg-dark");
+            document.body.classList.toggle("text-white");
+
+        }
+
+    </script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

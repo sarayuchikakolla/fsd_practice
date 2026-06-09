@@ -1,158 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Registration Form</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Registration Portal</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body{
+    background-color:#f5f7fa;
+}
+
+.college-header{
+    background:#f8f9fa;
+    border-bottom:1px solid #dee2e6;
+    padding:15px 0;
+}
+
+.college-logo{
+    width:100px;
+    height:auto;
+}
+
+.college-title{
+    font-size:3rem;
+    color:#1c2d48;
+    font-weight:400;
+}
+
+.registration-card{
+    max-width:950px;
+    margin:auto;
+    border:none;
+    border-radius:12px;
+}
+
+.card-header{
+    padding:15px;
+}
+
+.form-control,
+.form-select{
+    border-radius:8px;
+}
+
+.form-control:focus,
+.form-select:focus{
+    box-shadow:none;
+    border-color:#0d6efd;
+}
+
+.btn{
+    border-radius:8px;
+    min-width:120px;
+}
+
+.required{
+    color:red;
+}
+
+#preview{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border:2px solid #ddd;
+    border-radius:10px;
+    display:none;
+    margin-top:10px;
+}
+
+@media(max-width:768px){
+
+    .college-title{
+        font-size:1.8rem;
+        text-align:center;
+    }
+
+    .college-logo{
+        width:70px;
+    }
+
+}
+
+</style>
 </head>
+
 <body>
 
-<div class="container mt-5">
-    <div class="card shadow">
-        <div class="card-header bg-primary text-white">
-            <h2 class="text-center">Student Registration Form</h2>
-        </div>
 
-        <div class="card-body">
+<header class="college-header">
 
-            <form class="needs-validation" novalidate>
+<div class="container">
 
-                <div class="mb-3">
-                    <label class="form-label">Full Name</label>
-                    <input type="text" class="form-control" required>
-                    <div class="invalid-feedback">
-                        Please enter your name.
-                    </div>
-                </div>
+<div class="d-flex align-items-center justify-content-center">
 
-                <div class="mb-3">
-                    <label class="form-label">Roll Number</label>
-                    <input type="text" class="form-control" required>
-                    <div class="invalid-feedback">
-                        Please enter roll number.
-                    </div>
-                </div>
+<img src="img/logo.png"
+     alt="CVR Logo"
+     class="college-logo me-3">
 
-                <div class="mb-3">
-                    <label class="form-label">Email</label>
-                    <div class="input-group">
-                        <span class="input-group-text">@</span>
-                        <input type="email" class="form-control" required>
-                    </div>
-                    <div class="invalid-feedback">
-                        Enter a valid email.
-                    </div>
-                </div>
+<h1 class="college-title mb-0">
+CVR COLLEGE OF ENGINEERING
+</h1>
 
-                <div class="mb-3">
-                    <label class="form-label">Mobile Number</label>
-                    <div class="input-group">
-                        <span class="input-group-text">+91</span>
-                        <input type="tel" class="form-control"
-                               pattern="[0-9]{10}" required>
-                    </div>
-                    <div class="invalid-feedback">
-                        Mobile number must contain 10 digits.
-                    </div>
-                </div>
+</div>
 
-                <div class="mb-3">
-                    <label class="form-label">Gender</label><br>
+</div>
 
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input"
-                               type="radio" name="gender" required>
-                        <label class="form-check-label">Male</label>
-                    </div>
+</header>
 
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input"
-                               type="radio" name="gender">
-                        <label class="form-check-label">Female</label>
-                    </div>
 
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input"
-                               type="radio" name="gender">
-                        <label class="form-check-label">Other</label>
-                    </div>
-                </div>
+<div class="container my-5">
 
-                <div class="mb-3">
-                    <label class="form-label">Branch</label>
-                    <select class="form-select" required>
-                        <option value="">Choose Branch</option>
-                        <option>CSE</option>
-                        <option>ECE</option>
-                        <option>EEE</option>
-                        <option>CIVIL</option>
-                        <option>MECHANICAL</option>
-                    </select>
-                </div>
+<div class="card registration-card shadow">
 
-                <div class="mb-3">
-                    <label class="form-label">Date of Birth</label>
-                    <input type="date" class="form-control" required>
-                </div>
+<div class="card-header bg-primary text-white text-center">
 
-                <div class="mb-3">
-                    <label class="form-label">Address</label>
-                    <textarea class="form-control"
-                              rows="3" required></textarea>
-                </div>
+<h3 class="mb-0">
+Student Registration Form
+</h3>
 
-                <div class="mb-3">
-                    <label class="form-label">Upload Photo</label>
-                    <input type="file" class="form-control"
-                           accept="image/*" required>
-                </div>
+</div>
 
-                <div class="form-check mb-3">
-                    <input class="form-check-input"
-                           type="checkbox" required>
-                    <label class="form-check-label">
-                        I accept the Terms and Conditions
-                    </label>
-                    <div class="invalid-feedback">
-                        You must accept the terms.
-                    </div>
-                </div>
+<div class="card-body p-4">
 
-                <button type="submit"
-                        class="btn btn-success">
-                    Register
-                </button>
+<form class="needs-validation" novalidate>
 
-                <button type="reset"
-                        class="btn btn-secondary">
-                    Reset
-                </button>
+<div class="row">
 
-            </form>
 
-        </div>
-    </div>
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Full Name <span class="required">*</span>
+</label>
+
+<input type="text"
+       class="form-control"
+       required>
+
+<div class="invalid-feedback">
+Please enter your full name.
+</div>
+
+</div>
+
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Roll Number <span class="required">*</span>
+</label>
+
+<input type="text"
+       class="form-control"
+       required>
+
+<div class="invalid-feedback">
+Please enter roll number.
+</div>
+
+</div>
+
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Email <span class="required">*</span>
+</label>
+
+<input type="email"
+       class="form-control"
+       required>
+
+<div class="invalid-feedback">
+Enter a valid email.
+</div>
+
+</div>
+
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Mobile Number <span class="required">*</span>
+</label>
+
+<input type="tel"
+       class="form-control"
+       pattern="[0-9]{10}"
+       required>
+
+<div class="invalid-feedback">
+Enter a valid 10-digit mobile number.
+</div>
+
+</div>
+
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Gender <span class="required">*</span>
+</label>
+
+<div>
+
+<div class="form-check form-check-inline">
+
+<input class="form-check-input"
+       type="radio"
+       name="gender"
+       required>
+
+<label class="form-check-label">
+Male
+</label>
+
+</div>
+
+<div class="form-check form-check-inline">
+
+<input class="form-check-input"
+       type="radio"
+       name="gender">
+
+<label class="form-check-label">
+Female
+</label>
+
+</div>
+
+<div class="form-check form-check-inline">
+
+<input class="form-check-input"
+       type="radio"
+       name="gender">
+
+<label class="form-check-label">
+Other
+</label>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Branch <span class="required">*</span>
+</label>
+
+<select class="form-select" required>
+
+<option value="">
+Select Branch
+</option>
+
+<option>CSE</option>
+<option>CSM</option>
+<option>CSD</option>
+<option>IT</option>
+<option>ECE</option>
+<option>EEE</option>
+<option>MECH</option>
+<option>CIVIL</option>
+
+</select>
+
+<div class="invalid-feedback">
+Select your branch.
+</div>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Date of Birth <span class="required">*</span>
+</label>
+
+<input type="date"
+       class="form-control"
+       required>
+
+<div class="invalid-feedback">
+Select date of birth.
+</div>
+
+</div>
+
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Upload Photo <span class="required">*</span>
+</label>
+
+<input type="file"
+       id="photo"
+       class="form-control"
+       accept="image/*"
+       required>
+
+<div class="invalid-feedback">
+Upload your photo.
+</div>
+
+<img id="preview">
+
+</div>
+
+
+<div class="col-12 mb-3">
+
+<label class="form-label">
+Address <span class="required">*</span>
+</label>
+
+<textarea class="form-control"
+          rows="3"
+          required></textarea>
+
+<div class="invalid-feedback">
+Enter your address.
+</div>
+
+</div>
+
+
+<div class="col-12 mb-4">
+
+<div class="form-check">
+
+<input class="form-check-input"
+       type="checkbox"
+       required>
+
+<label class="form-check-label">
+I accept the Terms and Conditions
+</label>
+
+<div class="invalid-feedback">
+Please accept the terms.
+</div>
+
+</div>
+
+</div>
+
+
+<div class="col-12 text-center">
+
+<button type="submit"
+        class="btn btn-primary me-2">
+Register
+</button>
+
+<button type="reset"
+        class="btn btn-secondary">
+Reset
+</button>
+
+</div>
+
+</div>
+
+</form>
+
+<div id="successMessage"
+     class="alert alert-success mt-4 d-none">
+
+Student Registered Successfully!
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 <script src="css/bootstrap.bundle.min.js"></script>
 
 <script>
+
+
 (() => {
-  'use strict';
 
-  const forms = document.querySelectorAll('.needs-validation');
+'use strict';
 
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      form.classList.add('was-validated');
-    }, false);
-  });
+const forms =
+document.querySelectorAll('.needs-validation');
+
+Array.from(forms).forEach(form => {
+
+form.addEventListener('submit', event => {
+
+if (!form.checkValidity()) {
+
+event.preventDefault();
+event.stopPropagation();
+
+}
+else {
+
+event.preventDefault();
+
+document
+.getElementById('successMessage')
+.classList.remove('d-none');
+
+}
+
+form.classList.add('was-validated');
+
+}, false);
+
+});
+
 })();
+
+
+
+document
+.getElementById('photo')
+.addEventListener('change', function(){
+
+const file = this.files[0];
+
+if(file){
+
+const reader = new FileReader();
+
+reader.onload = function(e){
+
+const preview =
+document.getElementById('preview');
+
+preview.src = e.target.result;
+preview.style.display = "block";
+
+};
+
+reader.readAsDataURL(file);
+
+}
+
+});
+
 </script>
 
 </body>
