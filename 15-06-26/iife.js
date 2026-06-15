@@ -9,6 +9,13 @@
 // })();
 
 
-(()=>{
-    console.log("hello")
+// (()=>{
+//     console.log("hello")
+// })();
+
+
+(function() {
+    var name="ssrayu";
+    var message = "Hello " + name;
+    console.log(message); 
 })();
