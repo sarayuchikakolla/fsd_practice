@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Elizabeth Jones",
+    "username": "elizabeth69",
+    "email": "elizabeth.jones@demo.net",
+    "role": "Project Manager",
+    "location": "Berlin, DE"
+  },
+  {
+    "id": 2,
+    "name": "Elizabeth Brown",
+    "username": "elizabeth49",
+    "email": "elizabeth.brown@demo.net",
+    "role": "UX Designer",
+    "location": "Toronto, CA"
+  },
+  {
+    "id": 3,
+    "name": "James Davis",
+    "username": "james97",
+    "email": "james.davis@testmail.org",
+    "role": "UX Designer",
+    "location": "Toronto, CA"
+  },
+  {
+    "id": 4,
+    "name": "Linda Williams",
+    "username": "linda24",
+    "email": "linda.williams@testmail.org",
+    "role": "Software Engineer",
+    "location": "New York, NY"
+  },
+  {
+    "id": 5,
+    "name": "Jennifer Brown",
+    "username": "jennifer50",
+    "email": "jennifer.brown@testmail.org",
+    "role": "Marketing Lead",
+    "location": "Austin, TX"
+  },
+  {
+    "id": 6,
+    "name": "William Williams",
+    "username": "william25",
+    "email": "william.williams@example.com",
+    "role": "Project Manager",
+    "location": "Toronto, CA"
+  },
+  {
+    "id": 7,
+    "name": "Michael Brown",
+    "username": "michael87",
+    "email": "michael.brown@demo.net",
+    "role": "Marketing Lead",
+    "location": "Austin, TX"
+  },
+  {
+    "id": 8,
+    "name": "Linda Davis",
+    "username": "linda18",
+    "email": "linda.davis@testmail.org",
+    "role": "Marketing Lead",
+    "location": "New York, NY"
+  },
+  {
+    "id": 9,
+    "name": "Mary Garcia",
+    "username": "mary52",
+    "email": "mary.garcia@demo.net",
+    "role": "Data Analyst",
+    "location": "New York, NY"
+  },
+  {
+    "id": 10,
+    "name": "Michael Rodriguez",
+    "username": "michael93",
+    "email": "michael.rodriguez@demo.net",
+    "role": "UX Designer",
+    "location": "New York, NY"
+  }
+]
