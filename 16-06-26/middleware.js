@@ -4,10 +4,16 @@ const users=require('./users.json')
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 
-// app.use((req,res,next)=>{
-//     req.uname="cvr"
+app.use((req, res, next) => {
+    req.uname = "cvr";
+    console.log("middleware 1");
+    next();
+});
 
-// })
+app.use((req, res, next) => {
+    console.log("middleware 2", req.uname);
+    next();
+});
 
 app.get("/",(req,res)=>{
     //res.send("welcome")
